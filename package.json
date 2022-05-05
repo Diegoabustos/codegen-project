@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
+    "generate": "graphql-codegen",
+    "exec": "yarn generate && ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +17,9 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.9",
+    "@graphql-codegen/typescript-resolvers": "^2.6.2",
     "@graphql-tools/graphql-file-loader": "^7.3.11",
     "@graphql-tools/load": "^7.5.10",
     "@graphql-tools/schema": "^8.3.10",
